@@ -59,13 +59,12 @@ public class MainActivity extends AppCompatActivity {
     public void playAgainPressed(View view){
         TextView txtWinner = (TextView) findViewById(R.id.txtWinner);
         Button btnRestart = (Button) findViewById(R.id.btnRestart);
-        ImageView counter = (ImageView) view;
 
         txtWinner.setVisibility(View.GONE);
         btnRestart.setVisibility(View.GONE);
         GridLayout gridLayout = (GridLayout) findViewById(R.id.gridLayout);
         for(int i=0; i<gridLayout.getChildCount(); i++) {
-            ImageView child = (ImageView) gridLayout.getChildAt(i);
+            ImageView counter = (ImageView) gridLayout.getChildAt(i);
             counter.setImageDrawable(null);
         }
         for(int i =0; i<gameState.length; i++){
